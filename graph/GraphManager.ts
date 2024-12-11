@@ -21,6 +21,9 @@ export class GraphManager {
                     opacity: this.settings.lineOpacity
                 }
             }
+        }).then(() => {
+            // 생성된 그래프 뷰로 포커스 이동
+            this.app.workspace.setActiveLeaf(leaf, { focus: true });
         });
     }
 
